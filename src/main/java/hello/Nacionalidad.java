@@ -5,6 +5,7 @@ public class Nacionalidad {
 	private Integer id;
 	private String nombre;
 	
+	
 	public Nacionalidad(Integer id, String nombre) {
 		super();
 		this.id = id;
@@ -22,5 +23,10 @@ public class Nacionalidad {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+	@Override
+	public String toString() {
+		return String.format("Nacionalidad [id=%s, nombre=%s]", id, nombre);
+	}
+	
 	
 }

@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,6 +27,11 @@ public class GreetingController {
     @RequestMapping("/nacionalidades")
     public List<Nacionalidad> nacionalidades() {
         return getListNacionalidades();
+    }
+    
+    @PostMapping("/login")
+    public void login(@RequestBody Usuario usuario) {
+    	System.out.println(usuario);
     }
     
     private List<Nacionalidad> getListNacionalidades(){
